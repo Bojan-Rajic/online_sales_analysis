@@ -20,3 +20,6 @@ class ProductManager:
         for product in self.products:
             ukupno += product.price * product.quantity
         print(f"Ukupna vrednost svih proizvoda je: {ukupno}\n")
+        
+    def uklanjanje_proizvoda(self, name):
+        self.products = [x for x in self.products if x.name != name]
